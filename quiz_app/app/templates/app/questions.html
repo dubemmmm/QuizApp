@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" lang="en">
+    {% load static %}
+    <head>
+        <title>HomePage</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'app/css/style3.css' %}">
+
+    </head>
+    <body class="background">
+        <div class="container">
+            {% if quiz.title == 'HTML'%}
+                <div class="topic-quiz">
+                    <div style='background-color:#F6E7FF' class="quiz-icon-container">
+                        <img class='quiz-icon' src="{% static 'app/images/icon-html.svg'%}"alt="image is not available">
+                    </div>
+                    <h1 class="quiz-title">HTML</h1>
+                </div>
+            {% elif quiz.title == 'CSS' %}
+                <div class="topic-quiz">
+                    <div style='background-color:#F6E7FF' class="quiz-icon-container">
+                        <img class='quiz-icon' src="{% static 'app/images/icon-css.svg'%}"alt="image is not available">
+                    </div>
+                    <h1 class="quiz-title">CSS</h1>
+                </div>
+            {% elif quiz.title == 'JavaScript' %}
+                <div class="topic-quiz">
+                    <div style='background-color:#F6E7FF' class="quiz-icon-container">
+                        <img class='quiz-icon' src="{% static 'app/images/icon-js.svg'%}"alt="image is not available">
+                    </div>
+                    <h1 class="quiz-title">JavaSript</h1>
+                </div>
+            {% else %}
+                <div class="topic-quiz">
+                    <div style='background-color:#F6E7FF' class="quiz-icon-container">
+                        <img class='quiz-icon' src="{% static 'app/images/icon-accessibility.svg'%}"alt="image is not available">
+                    </div>
+                    <h1 class="quiz-title">Accessibility</h1>
+                </div>
+            {% endif %}
+            <div class="sun-moon">
+                <img class='icon-sun-dark' src="{% static 'app/images/icon-sun-dark.svg'%}" alt="image is not available">
+                <img class='icon-moon-dark' src="{% static 'app/images/icon-moon-dark.svg'%}" alt="image is not available">
+            </div>
+            
+        </div>
+
+        <form action="{% url 'app:check_answers' quiz_id=quiz.id %}" method="post" id="quizform">
+            {% csrf_token %}
+            <div class="container2" data-quiz-id="{{ quiz.id }}">
+                <div class="welcome-container">
+                    <h1 class="question-text">{{ current_question.questions_text }}</h1>
+                </div>
+                <div class="quizzes-container">
+                    {% for option in current_question.options.all %}
+                    <div class="quiz-type-container" onclick='selectOption(this, {{ option.id }})'>
+                        <div class="quiz-icon-container">
+                            <h1 class='options'>
+                                {% if forloop.counter == 1 %}A{% endif %}
+                                {% if forloop.counter == 2 %}B{% endif %}
+                                {% if forloop.counter == 3 %}C{% endif %}
+                                {% if forloop.counter == 4 %}D{% endif %}
+                            </h1>
+                        </div>
+                        <div class="quiz-title-container">
+                            <p class="quiz-title">{{ option.options_text }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <input type="hidden" name="selected_option_id" id="selected_option_id" value="">
+                    <button type="submit" class="submit-button" form='quizform'>
+                        <h1 class="submit-title">Submit Answer</h1>
+                    </button>
+                    <div id="answer-feedback" ></div>
+                </div>
+            </div>
+        </form>
+        <script>
+            function selectOption(element, optionId) {
+                var containers = document.querySelectorAll('.quiz-type-container');
+                containers.forEach(function(container) {
+                    container.classList.remove('clicked');
+                });
+
+                element.classList.add('clicked');
+                document.getElementById('selected_option_id').value = optionId;
+            }
+        </script>
+    </body>
+</html>

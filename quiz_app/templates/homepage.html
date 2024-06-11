@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" lang="en">
+    <head>
+        <title>HomePage</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+        <style>
+       
+            a {
+                text-decoration: none; /* Remove underline */
+                color: inherit; /* Use the default text color */
+            }
+        </style>
+    </head>
+    <body class="background">
+        <div class="container">
+            <img class='icon-sun-dark' src="frontend-quiz-app/starter-code/assets/images/icon-sun-dark.svg" alt="image is not available">
+            <img class='icon-moon-dark' src="frontend-quiz-app/starter-code/assets/images/icon-moon-dark.svg" alt="image is not available">
+        </div>
+        <div class="container2">
+            <div class="welcome-container">
+                <h1 class="welcome-text">Welcome to the</h1>
+                <h1 class="welcome-text2">Frontend Quiz!</h1>
+                <p class="welcome-text3">Pick a subject to get started</p>
+            </div>
+            <div class="quizzes-container">
+                <div class="quiz-type-container">
+                    <div style='background-color:#FFF1E9' class="quiz-icon-container">
+                        <img class='quiz-icon' src="frontend-quiz-app/starter-code/assets/images/icon-html.svg" alt="image is not available">
+                    </div>
+                    <h1 class="quiz-title">HTML</h1>
+                </div>
+                <div class="quiz-type-container">
+                    <div style='background-color:#E0FDEF'class="quiz-icon-container">
+                        <img class='quiz-icon' src="frontend-quiz-app/starter-code/assets/images/icon-css.svg" alt="image is not available">
+                    </div>
+                    <h1 class="quiz-title">CSS</h1>
+                </div>
+                <div class="quiz-type-container">
+                    <div style='background-color:#EBF0FF' class="quiz-icon-container">
+                        <img class='quiz-icon' src="frontend-quiz-app/starter-code/assets/images/icon-js.svg" alt="image is not available">
+                    </div>
+                    <h1 class="quiz-title">Javascript</h1>
+                </div>
+                <div class="quiz-type-container">
+                    <div style='background-color:#F6E7FF' class="quiz-icon-container">
+                        <img class='quiz-icon' src="frontend-quiz-app/starter-code/assets/images/icon-accessibility.svg" alt="image is not available">
+                    </div>
+                    <h1 class="quiz-title">Accessibility</h1>
+                </div>
+                <h1><a style="color:green" href="questions.html">Go to Questions page</a></h1>
+                <h1><a style="color:green" href="score.html">Go to Scores</a></h1>
+            </div>
+        </div>
+    </body>
+</html>

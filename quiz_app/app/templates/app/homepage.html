@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" lang="en">
+    {% load static %}
+    <head>
+        <title>HomePage</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'app/css/style2.css' %}">
+        <style>
+       
+            a {
+                text-decoration: none; 
+                color: inherit; 
+            }
+        </style>
+    </head>
+    <body class="background">
+        <div class="container">
+            <img class='icon-sun-dark' src="{% static 'app/images/icon-sun-dark.svg'%}" alt="image is not available">
+            <img class='icon-moon-dark' src="{% static 'app/images/icon-moon-dark.svg'%}" alt="image is not available">
+        </div>
+        <div class="container2">
+            <div class="welcome-container">
+                <h1 class="welcome-text">Welcome to the</h1>
+                <h1 class="welcome-text2">Frontend Quiz!</h1>
+                <p class="welcome-text3">Pick a subject to get started</p>
+            </div>
+            <div class="quizzes-container">
+                <a href={% url 'app:next_question' quiz_id=1%}>
+                    <div class="quiz-type-container">
+                        <div style='background-color:#FFF1E9' class="quiz-icon-container">
+                            <img class='quiz-icon' src="{% static 'app/images/icon-html.svg'%}" alt="image is not available">
+                        </div>
+                        <h1 class="quiz-title">HTML</h1>
+                    </div>
+                </a>
+                <a href={% url 'app:next_question' quiz_id=2%}>
+                <div class="quiz-type-container">
+                    <div style='background-color:#E0FDEF'class="quiz-icon-container">
+                        <img class='quiz-icon' src="{% static 'app/images/icon-css.svg'%}" alt="image is not available">
+                    </div>
+                    <h1 class="quiz-title">CSS</h1>
+                </div>
+                </a>
+                <a href={% url 'app:next_question' quiz_id=3%}>
+                <div class="quiz-type-container">
+                    <div style='background-color:#EBF0FF' class="quiz-icon-container">
+                        <img class='quiz-icon' src="{% static 'app/images/icon-js.svg'%}" alt="image is not available">
+                    </div>
+                    <h1 class="quiz-title">Javascript</h1>
+                </div>
+                </a>
+                <a href={% url 'app:next_question' quiz_id=4%}>
+                <div class="quiz-type-container">
+                    <div style='background-color:#F6E7FF' class="quiz-icon-container">
+                        <img class='quiz-icon' src="{% static 'app/images/icon-accessibility.svg'%}" alt="image is not available">
+                    </div>
+                    <h1 class="quiz-title">Accessibility</h1>
+                </div>
+                </a>
+            </div>
+        </div>
+    </body>
+</html>
