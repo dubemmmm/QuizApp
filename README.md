@@ -23,12 +23,13 @@ This is a Django-based quiz app that allows users to take quizzes on various top
 ## Screenshots
 
 1. Home Page Template
-   <img width="570" alt="Screenshot 2024-02-22 at 15 25 18" src="https://github.com/dubemmmm/quiz_app/screenshots/Screenshot_2024-06-11_at_15.22.04.png">
 
-2. Question Template
+  <img width="570" alt="Screenshot 2024-02-22 at 15 25 18" src="https://github.com/dubemmmm/Convolutional-Neural-Network/assets/101866658/f66c4da1-e327-4d45-99f1-e2c2627e49d9">
+
+3. Question Template
    ![Question Page](images/question.png)
 
-3. Score Template
+4. Score Template
    ![Score Page](images/score.png)
 
 ## How to Use
