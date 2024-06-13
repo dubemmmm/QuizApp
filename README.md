@@ -1,6 +1,6 @@
 # Quiz App
 
-![Quiz App Banner](images/banner.png)
+![Quiz App Banner]("Screenshot 2024-06-11 at 15.22.04.png")
 
 This is a Django-based quiz app that allows users to take quizzes on various topics. The app consists of three main templates: Home Page Template, Question Template, and Score Template.
 
