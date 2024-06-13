@@ -1,6 +1,6 @@
 # Quiz App
 
-![Quiz App Banner](screenshots/question_page)
+
 
 This is a Django-based quiz app that allows users to take quizzes on various topics. The app consists of three main templates: Home Page Template, Question Template, and Score Template.
 
@@ -24,7 +24,7 @@ This is a Django-based quiz app that allows users to take quizzes on various top
 
 1. Home Page Template
 
-  <img width="570" alt="Screenshot 2024-02-22 at 15 25 18" src="https://github.com/dubemmmm/Convolutional-Neural-Network/assets/101866658/f66c4da1-e327-4d45-99f1-e2c2627e49d9">
+  <img alt='image not displayed' src="screenshots/question_page.png" alt="Question Page" width="600">
 
 3. Question Template
    ![Question Page](images/question.png)
