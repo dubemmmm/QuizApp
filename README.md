@@ -1,8 +1,7 @@
 # Quiz App
 
 
-
-This is a Django-based quiz app that allows users to take quizzes on various topics. The app consists of three main templates: Home Page Template, Question Template, and Score Template.
+This is a Django-based quiz application that allows users to take quizzes on various topics, provides instant feedback for each question, and displays a final score summary.
 
 ## Features
 
@@ -23,15 +22,13 @@ This is a Django-based quiz app that allows users to take quizzes on various top
 ## Screenshots
 
 1. Home Page Template
-   ![Home Page](screenshots/home_page.png)
-
   <img alt='image not displayed' src="screenshots/home_page.png" alt="Question Page" width="600">
 
-3. Question Template
-   ![Question Page](images/question.png)
+2. Question Template
+   <img alt='image not displayed' src="screenshots/question_page.png" alt="Question Page" width="600">
 
-4. Score Template
-   ![Score Page](images/score.png)
+3. Score Template
+  <img alt='image not displayed' src="screenshots/score.png" alt="Question Page" width="600">
 
 ## How to Use
 
@@ -46,6 +43,9 @@ This is a Django-based quiz app that allows users to take quizzes on various top
 - Backend: Python (Django)
 - Database: SQLite (default database in Django)
 
-## Folder Structure
+## Getting Started
 
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/dubemmmm/QuizApp.git
 
