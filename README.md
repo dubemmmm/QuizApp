@@ -23,6 +23,7 @@ This is a Django-based quiz app that allows users to take quizzes on various top
 ## Screenshots
 
 1. Home Page Template
+   ![Home Page](screenshots/question_page.png)
 
   <img alt='image not displayed' src="screenshots/question_page.png" alt="Question Page" width="600">
 
